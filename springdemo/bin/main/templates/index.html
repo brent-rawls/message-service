@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="/custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/custom.js"></script>
+</head>
+
+
+    <body>
+
+        <div id="container">
+
+			<div th:replace="fragments/navbar"></div>
+
+            <div id="topbar">
+                home - about - contact - login - save - load - what
+            </div>
+
+            <div id="gridwrap">
+                <div id="leftcolumn">
+
+                    <div id="sitelogo">
+                        <div>WEBSITE</div>
+                        <img src="assets/images/default_icon.png" width="100px" />
+                        <div>It's Dot Com!(tm)</div>
+                    </div>
+
+                    <ul>
+                        <li>hey</li>
+                        <li>hey2</li>
+                        <li>hey3</li>
+                    </ul>
+                </div>
+
+                <div id="centercolumn">
+                    
+                    <!--
+                    <div class="contains-message">
+                        <input type="text" th:field="*{firstName}" />
+                    </div>
+ 					-->
+ 
+                    <div class="contains-message">
+                        
+                    </div>
+
+                    <div class="contains-message">
+                        
+                    </div>
+
+                </div>
+
+                <div id="rightcolumn">
+                    
+                    <div>idea 1</div>
+
+                    <div>idea 2</div>
+
+                    <div>idea 3</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        
+
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+    <title>New Message</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="/custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/custom.js"></script>
+</head>
+
+ <body>
+    <div class="container">
+
+		<div th:replace="fragments/navbar"></div>
+
+        <div class="jumbotron col-md-8 col-md-offset-2">
+            <h2>New Message</h2><br/>
+            <form th:action="@{/messages}" th:object="${message}" method="post" autocomplete="off">
+      <div class="form-group">
+        <textarea rows="5" th:field="*{content}" placeholder="What's happening?" class="form-control"></textarea>
+        <label th:if="${#fields.hasErrors('content')}" th:errors="*{content}" class="validation-message"></label>	
+    </div>
+    <div class="form-group">
+        <button class="btn btn-md btn-success btn-block" name="Submit" value="Submit" type="Submit">Tell the world!</button>
+    </div>
+</form>
+        <div th:if="${successMessage}">
+            <h3><span class="text-success" th:utext="${successMessage}"></span></h3>
+        </div> 
+    </div>
+  </div>
+</body>
+
+</html>

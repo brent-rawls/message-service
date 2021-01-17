@@ -1,0 +1,10 @@
+<div th:replace="fragments/navbar"></div>
+
+<h2>User</h2>
+<div th:each="user:${userList}">
+	<div>
+		<span th:text="${user.username}"></span> - 
+		<span th:text="${user.firstName}"></span>
+		<span th:text="${user.lastName}"></span>
+	</div>
+</div>
